@@ -10,11 +10,40 @@
     placeholder="Search by Product Name">
 
     <!-- Search suggestions -->
-    <ul v-if="searchSuggestions.length > 0" class="search-suggestions">
-      <li v-for="(suggestion, index) in searchSuggestions" :key="index" @click="selectSuggestion(suggestion)">
-        {{ suggestion.name }}
-      </li>
-    </ul>
+   
+    <div class="container mt-2 pt-4  mx-auto search-suggestions" v-if="searchSuggestions.length > 0" >
+            <div class="row">
+              <div class="col-md-6 mx-auto">
+                  <div class="card my-3 list-group-item-success shadow-lg"
+                  v-for="(suggestion, index) in searchSuggestions" 
+                  :key="index" 
+                  @click="selectSuggestion(suggestion)">
+                    <div class="row align-items-center">
+                      
+                    <div class="col-md-12">
+                      <ul class="list-group ">
+                        <li class="list-group-item">
+                          Name: <span id="fw-bold name"
+                         > 
+                          {{ suggestion.name }} </span>
+                        </li>
+                        <li class="list-group-item">
+                          Description: <span id="fw-bold description" > {{ suggestion.description  }} </span>
+                        </li>
+                        <li class="list-group-item">
+                          Price: <span id="fw-bold Price"> ${{ suggestion.price }} </span>
+                        </li>
+                        <li class="list-group-item">
+                          Quantity Available: <span id="fw-bold Quantity"> {{ suggestion.quantity }} </span>
+                        </li>
+                      </ul>
+                    </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+
 
     <!-- Sort buttons -->
     <div class="sortButtons">
