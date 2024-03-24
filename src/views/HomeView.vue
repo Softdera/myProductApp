@@ -449,4 +449,36 @@ export default {
   color: lightcoral;
   font-weight: bolder;
 }
+
+
+@media screen and (max-width: 600px) {
+
+* {
+    box-sizing: border-box;
+  }
+
+  .home {
+    padding: 10px;
+  }
+
+  .sortButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ascButton,
+  .desButton {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  
+  
+  
+  
+  
+  }
 </style>
